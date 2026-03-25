@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+         (request.auth.token.email == "godshandudoh@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    function isValidAccessRequest(data) {
+      return data.keys().hasAll(['name', 'email', 'supportType', 'status', 'createdAt']) &&
+             data.name is string && data.name.size() > 0 && data.name.size() < 100 &&
+             data.email is string && data.email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$") &&
+             data.supportType in ["Web systems", "Media / documents", "Custom solution", "General support"] &&
+             data.status == 'pending' &&
+             data.createdAt is string; // Using string for simplicity as per blueprint
+    }
+
+    match /access_requests/{requestId} {
+      // Anyone can create a request, but it must be valid and set to 'pending'
+      allow create: if isValidAccessRequest(request.resource.data);
+      
+      // Only admins can read, update, or delete requests
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      allow write: if isAdmin();
+    }
+  }
+}
