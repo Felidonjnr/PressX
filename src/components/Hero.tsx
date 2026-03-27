@@ -1,124 +1,184 @@
 import { motion } from "motion/react";
 import { siteContent } from "../data/content";
-import { ChevronRight, Shield, Cpu, Activity } from "lucide-react";
+import { ChevronRight, Shield, Cpu, Activity, Terminal, Lock } from "lucide-react";
 
 export const Hero = () => {
   const { hero } = siteContent;
 
   return (
-    <section className="relative min-h-screen flex items-center pt-728 pb-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 grid-bg opacity-20" />
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Floating Code Particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+        {[...Array(10)].map((_, i) => (
+          <motion.div
+            key={i}
+            initial={{ y: "110%", x: `${Math.random() * 100}%` }}
+            animate={{ y: "-10%" }}
+            transition={{ 
+              duration: 10 + Math.random() * 20, 
+              repeat: Infinity, 
+              ease: "linear",
+              delay: Math.random() * 10
+            }}
+            className="absolute text-[10px] font-mono text-accent/40 whitespace-nowrap"
+          >
+            {`0x${Math.random().toString(16).slice(2, 10)} >> ${Math.random() > 0.5 ? 'ALLOW' : 'DENY'}`}
+          </motion.div>
+        ))}
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-xs font-medium mb-6 tracking-wider uppercase"
+              className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-[10px] font-bold mb-8 tracking-[0.3em] uppercase backdrop-blur-sm"
             >
-              <Shield size={14} />
-              System Status: Operational
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              Secure Environment Initialized
             </motion.div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
+            <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] mb-8 tracking-tighter">
               {hero.headline}
             </h1>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/50 max-w-xl mb-12 leading-relaxed font-light">
               {hero.subheadline}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0,255,255,0.3)" }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-accent text-background font-bold rounded-sm flex items-center gap-2 group transition-all"
+                className="px-10 py-5 bg-accent text-background font-black rounded-sm flex items-center gap-3 group transition-all relative overflow-hidden"
               >
-                {hero.primaryCta}
-                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
+                <span className="relative z-10 uppercase tracking-widest">{hero.primaryCta}</span>
+                <ChevronRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
-              <span className="text-sm text-white/40 font-mono italic">
+              <div className="flex items-center gap-4 text-white/30 font-mono text-xs uppercase tracking-[0.2em]">
+                <div className="w-8 h-[1px] bg-white/10" />
                 {hero.microText}
-              </span>
+              </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="relative mt-12 lg:mt-0"
+            initial={{ opacity: 0, scale: 0.95, rotateY: 10 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+            className="hidden lg:block relative perspective-2000"
           >
-            {/* 3D Hacker Image */}
-            <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full opacity-20 animate-pulse" />
-            <motion.div
-              animate={{ 
-                y: [0, -20, 0],
-                rotateY: [-5, 5, -5],
-                rotateX: [2, -2, 2]
-              }}
-              transition={{ 
-                duration: 8, 
-                repeat: Infinity,
-                ease: "easeInOut" 
-              }}
-              className="relative z-10 perspective-1000"
-            >
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-2xl shadow-accent/40">
+            {/* High-End Hacker Visual */}
+            <div className="relative group">
+              {/* Glow Backdrops */}
+              <div className="absolute -inset-10 bg-accent/20 blur-[100px] rounded-full opacity-30 animate-pulse" />
+              <div className="absolute -inset-1 bg-gradient-to-tr from-accent/50 via-blue-500/30 to-purple-500/50 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000" />
+              
+              <motion.div
+                animate={{ 
+                  y: [0, -15, 0],
+                  rotateX: [2, -2, 2],
+                  rotateY: [-3, 3, -3]
+                }}
+                transition={{ 
+                  duration: 10, 
+                  repeat: Infinity,
+                  ease: "easeInOut" 
+                }}
+                className="relative z-10"
+              >
+                <div className="relative rounded-2xl border border-white/10 overflow-hidden bg-[#050505] shadow-2xl shadow-accent/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-                    alt="3D Hacker with Laptop"
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop"
+                    alt="High-end Technical Interface"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-auto grayscale-[0.4] group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
                   />
                   
-                  {/* Scanning Line Effect */}
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  {/* Overlay Scanline Effect */}
+                  <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] z-20 opacity-30" />
+                  
+                  {/* Animated Data Stream */}
+                  <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-30">
                     <motion.div 
-                      animate={{ y: ["0%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                      className="w-full h-[2px] bg-accent/30 shadow-[0_0_15px_rgba(0,255,255,0.5)]"
+                      animate={{ y: ["-100%", "100%"] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                      className="w-full h-20 bg-gradient-to-b from-transparent via-accent/10 to-transparent opacity-50"
                     />
                   </div>
                 </div>
-              </div>
-              
-              {/* Floating Dashboard Overlay */}
-              <div className="absolute -bottom-8 -right-8 glass p-6 rounded-lg border-white/10 w-72 hidden md:block backdrop-blur-xl">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-[10px] font-mono text-white/30 uppercase tracking-widest">
-                    System Monitor
+
+                {/* Floating UI Elements */}
+                <motion.div 
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-12 -left-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-48 z-40"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-accent">
+                      <Terminal size={16} />
+                    </div>
+                    <div className="text-[10px] font-mono text-white/50 uppercase tracking-widest leading-none">
+                      Terminal<br/><span className="text-accent">Active</span>
+                    </div>
                   </div>
-                  <Activity size={12} className="text-accent animate-pulse" />
-                </div>
-                <div className="space-y-3">
-                  <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full w-3/4 bg-accent" />
+                  <div className="space-y-1.5">
+                    <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                      <motion.div 
+                        animate={{ width: ["0%", "80%", "40%", "90%"] }}
+                        transition={{ duration: 5, repeat: Infinity }}
+                        className="h-full bg-accent" 
+                      />
+                    </div>
+                    <div className="h-1 w-2/3 bg-white/5 rounded-full overflow-hidden">
+                      <motion.div 
+                        animate={{ width: ["0%", "60%", "30%", "70%"] }}
+                        transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+                        className="h-full bg-blue-500" 
+                      />
+                    </div>
                   </div>
-                  <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full w-1/2 bg-blue-500" />
+                </motion.div>
+
+                <motion.div 
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-12 -right-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-56 z-40"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400">
+                      <Lock size={16} />
+                    </div>
+                    <div className="text-[10px] font-mono text-white/50 uppercase tracking-widest">
+                      Encryption<br/><span className="text-blue-400">AES-256</span>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
+                  <div className="grid grid-cols-4 gap-1">
+                    {[...Array(8)].map((_, i) => (
+                      <motion.div 
+                        key={i}
+                        animate={{ opacity: [0.2, 1, 0.2] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                        className="h-1 bg-blue-500/30 rounded-full" 
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
             
-            {/* Decorative elements */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 border-t-2 border-r-2 border-accent/20 rounded-tr-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-32 h-32 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl pointer-events-none" />
+            {/* Corner Accents */}
+            <div className="absolute -top-16 -right-16 w-48 h-48 border-t border-r border-accent/10 rounded-tr-[4rem] pointer-events-none" />
+            <div className="absolute -bottom-16 -left-16 w-48 h-48 border-b border-l border-accent/10 rounded-bl-[4rem] pointer-events-none" />
           </motion.div>
         </div>
       </div>
