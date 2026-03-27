@@ -113,5 +113,21 @@ export const siteContent = {
   },
   footer: {
     text: "Plus-Up Tech. No stories. Pure results."
+  },
+  systemPreview: {
+    heading: "The System in Action",
+    subheading: "A glimpse into the controlled technical environment we build for our clients.",
+    stats: [
+      { label: "Uptime", value: "99.99%" },
+      { label: "Automation Rate", value: "85%+" },
+      { label: "Security Score", value: "A+" }
+    ],
+    terminalLines: [
+      "> Initializing Plus-Up Secure Layer...",
+      "> Establishing encrypted tunnel...",
+      "> Loading automation modules...",
+      "> System status: OPTIMAL",
+      "> Ready for execution."
+    ]
   }
 };

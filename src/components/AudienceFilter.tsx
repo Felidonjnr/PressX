@@ -14,7 +14,7 @@ export const AudienceFilter = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4 text-white">
             {audience.heading}
           </h2>
         </motion.div>

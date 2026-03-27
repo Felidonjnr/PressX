@@ -16,7 +16,7 @@ export const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4 text-white">
             {services.heading}
           </h2>
         </motion.div>
@@ -31,15 +31,15 @@ export const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group p-8 rounded-xl border border-white/5 bg-white/[0.01] hover:border-accent/30 transition-all relative overflow-hidden"
+                className="group p-8 rounded-xl border border-white/5 bg-white/[0.01] hover:border-accent/30 transition-all relative overflow-hidden glow-border-hover"
               >
-                <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Icon size={120} />
+                <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity">
+                  <Icon size={120} className="text-accent" />
                 </div>
                 
                 <div className="relative z-10">
-                  <div className="mb-6 p-3 w-fit rounded bg-accent/10 text-accent group-hover:bg-accent group-hover:text-background transition-all">
-                    <Icon size={24} />
+                  <div className="mb-6 p-4 w-fit rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-background transition-all glow-border">
+                    <Icon size={28} />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-white/90 mb-2">
                     {service.title}

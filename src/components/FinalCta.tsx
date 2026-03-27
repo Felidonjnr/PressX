@@ -15,7 +15,7 @@ export const FinalCta = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-2xl md:text-4xl font-display font-bold mb-12 leading-relaxed">
+          <h2 className="text-2xl md:text-4xl font-display font-bold mb-12 leading-relaxed text-white">
             {finalCta.line}
           </h2>
           
@@ -23,7 +23,7 @@ export const FinalCta = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById('request-form')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-12 py-5 bg-white text-background font-bold rounded-sm flex items-center gap-2 mx-auto group transition-all"
+            className="px-12 py-5 bg-white text-black font-bold rounded-sm flex items-center gap-2 mx-auto group transition-all"
           >
             {finalCta.button}
             <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />

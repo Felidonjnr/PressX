@@ -18,7 +18,7 @@ export const Solution = () => {
               <Layers size={24} />
               <span className="text-sm font-mono uppercase tracking-widest">The Solution</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight text-white">
               {solution.heading}
             </h2>
             <p className="text-xl text-white/60 mb-12 leading-relaxed">

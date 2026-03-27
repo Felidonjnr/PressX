@@ -15,8 +15,8 @@ export const AccessForm = () => {
           className="glass p-8 md:p-16 rounded-3xl border border-white/10 relative overflow-hidden"
         >
           {/* Background Glow */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 text-center">
             <motion.div
@@ -29,7 +29,7 @@ export const AccessForm = () => {
               Limited Onboarding Active
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight text-white">
               {form.heading}
             </h2>
             
@@ -56,9 +56,9 @@ export const AccessForm = () => {
                 href={form.telegramGroupLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0,255,255,0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0,112,243,0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full md:w-auto px-12 py-6 bg-accent text-background font-black rounded-sm flex items-center justify-center gap-3 group transition-all relative overflow-hidden"
+                className="w-full md:w-auto px-12 py-6 bg-accent text-white font-black rounded-sm flex items-center justify-center gap-3 group transition-all relative overflow-hidden"
               >
                 <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 <span className="uppercase tracking-widest">{form.submitButton}</span>

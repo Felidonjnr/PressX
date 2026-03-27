@@ -15,7 +15,7 @@ export const Problem = () => {
             viewport={{ once: true }}
             className="mb-16 text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white">
               {problem.heading}
             </h2>
           </motion.div>

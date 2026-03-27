@@ -44,11 +44,11 @@ export const Hero = () => {
               Secure Environment Initialized
             </motion.div>
             
-            <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] mb-8 tracking-tighter">
+            <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] mb-8 tracking-tighter text-white">
               {hero.headline}
             </h1>
             
-            <p className="text-lg md:text-xl text-white/50 max-w-xl mb-12 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-white/60 max-w-xl mb-12 leading-relaxed font-light">
               {hero.subheadline}
             </p>
 
@@ -97,23 +97,31 @@ export const Hero = () => {
                 className="relative z-10"
               >
                 <div className="relative rounded-2xl border border-white/10 overflow-hidden bg-[#050505] shadow-2xl shadow-accent/20">
+                  <div className="absolute inset-0 grid-bg-fine opacity-20 z-10" />
                   <img 
                     src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
                     alt="High-end Technical Interface"
                     referrerPolicy="no-referrer"
-                    className="w-full h-auto grayscale-[0.4] group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
+                    className="w-full h-auto grayscale-[0.4] group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-80"
                   />
                   
                   {/* Overlay Scanline Effect */}
-                  <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] z-20 opacity-30" />
+                  <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_2px] z-20 opacity-30" />
                   
                   {/* Animated Data Stream */}
                   <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-30">
                     <motion.div 
                       animate={{ y: ["-100%", "100%"] }}
                       transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                      className="w-full h-20 bg-gradient-to-b from-transparent via-accent/10 to-transparent opacity-50"
+                      className="w-full h-20 bg-gradient-to-b from-transparent via-accent/20 to-transparent opacity-50"
                     />
+                  </div>
+
+                  {/* Mock Code Overlay */}
+                  <div className="absolute bottom-4 left-4 font-mono text-[8px] text-accent/40 z-30 hidden md:block">
+                    <p>01001011 01001111 01001110 01001111</p>
+                    <p>SYSTEM_STATUS: SECURE</p>
+                    <p>ENCRYPTION: ACTIVE</p>
                   </div>
                 </div>
 
@@ -121,7 +129,7 @@ export const Hero = () => {
                 <motion.div 
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-12 -left-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-48 z-40"
+                  className="absolute -top-12 -left-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-48 z-40 glow-border"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-accent">
@@ -152,7 +160,7 @@ export const Hero = () => {
                 <motion.div 
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-12 -right-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-56 z-40"
+                  className="absolute -bottom-12 -right-12 glass p-5 rounded-xl border-white/10 backdrop-blur-2xl w-56 z-40 glow-border"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400">
@@ -169,6 +177,28 @@ export const Hero = () => {
                         animate={{ opacity: [0.2, 1, 0.2] }}
                         transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
                         className="h-1 bg-blue-500/30 rounded-full" 
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Additional Floating Element: Activity Monitor */}
+                <motion.div 
+                  animate={{ x: [10, -10, 10] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-1/2 -right-20 glass p-4 rounded-xl border-white/10 backdrop-blur-2xl w-40 z-40 hidden xl:block glow-border"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Activity size={14} className="text-accent" />
+                    <span className="text-[10px] font-mono text-white/50 uppercase tracking-widest">Activity</span>
+                  </div>
+                  <div className="flex items-end gap-1 h-8">
+                    {[...Array(10)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ height: ["20%", "80%", "40%", "100%", "20%"] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: i * 0.1 }}
+                        className="w-full bg-accent/30 rounded-t-sm"
                       />
                     ))}
                   </div>

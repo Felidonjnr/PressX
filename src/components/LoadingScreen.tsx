@@ -29,13 +29,13 @@ export const LoadingScreen = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-center"
+          className="text-center text-white"
         >
-          <h2 className="text-2xl font-display font-bold mb-2 tracking-widest uppercase">
+          <h2 className="text-2xl font-display font-bold mb-2 tracking-widest uppercase text-white">
             Plus-Up Initializing...
           </h2>
-          <div className="flex items-center justify-center gap-3 text-white/40 font-mono text-[10px] uppercase tracking-[0.4em]">
-            <Loader2 size={12} className="animate-spin" />
+          <div className="flex items-center justify-center gap-3 text-white/60 font-mono text-[10px] uppercase tracking-[0.4em]">
+            <Loader2 size={12} className="animate-spin text-accent" />
             Connecting to the Plug
           </div>
         </motion.div>

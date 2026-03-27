@@ -4,7 +4,7 @@ export const BackgroundEffects = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 grid-bg opacity-[0.03]" />
+      <div className="absolute inset-0 grid-bg opacity-[0.05]" />
 
       {/* Slow Moving Light Orbs */}
       <motion.div
@@ -18,7 +18,7 @@ export const BackgroundEffects = () => {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute -top-1/4 -left-1/4 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[150px]"
+        className="absolute -top-1/4 -left-1/4 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[150px]"
       />
       
       <motion.div
@@ -32,7 +32,19 @@ export const BackgroundEffects = () => {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute -bottom-1/4 -right-1/4 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[150px]"
+        className="absolute -bottom-1/4 -right-1/4 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px]"
+      />
+
+      <motion.div
+        animate={{
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,242,255,0.05)_0%,transparent_70%)]"
       />
 
       {/* Floating Geometric Patterns */}

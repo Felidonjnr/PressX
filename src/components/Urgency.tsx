@@ -22,7 +22,7 @@ export const Urgency = () => {
             </div>
             
             <div className="flex-1">
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-accent">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-white">
                 {urgency.heading}
               </h2>
               <div className="space-y-2">
