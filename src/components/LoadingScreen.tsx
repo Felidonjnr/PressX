@@ -32,11 +32,11 @@ export const LoadingScreen = () => {
           className="text-center"
         >
           <h2 className="text-2xl font-display font-bold mb-2 tracking-widest uppercase">
-            Initializing System
+            Plus-Up Initializing...
           </h2>
-          <div className="flex items-center justify-center gap-3 text-white/40 font-mono text-xs uppercase tracking-[0.4em]">
-            <Loader2 size={14} className="animate-spin" />
-            Establishing Secure Layer
+          <div className="flex items-center justify-center gap-3 text-white/40 font-mono text-[10px] uppercase tracking-[0.4em]">
+            <Loader2 size={12} className="animate-spin" />
+            Connecting to the Plug
           </div>
         </motion.div>
 

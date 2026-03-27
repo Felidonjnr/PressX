@@ -1,113 +1,117 @@
 export const siteContent = {
   hero: {
-    headline: "Access a Controlled Digital Support System for Precision Workflows",
-    subheadline: "A structured layer for building tools, processing digital media, and supporting technical execution — without unnecessary delays.",
-    primaryCta: "Request Access",
-    microText: "Limited onboarding. Access is reviewed."
+    headline: "Plus-Up Your Digital Game with Precision Tech.",
+    subheadline: "We are the trusted dark-tech plug helping you build, scale, and automate your brand without the usual stories. Pure results, no stress.",
+    primaryCta: "Join the Waiting Room",
+    microText: "Limited access. We only onboard serious players."
   },
   problem: {
-    heading: "Most workflows break down at execution.",
+    heading: "Most digital setups are just 'vibes and insha Allah'.",
     points: [
-      "You need tools but don’t have them ready",
-      "You handle media and data manually",
-      "You spend time figuring things out instead of executing",
-      "You don’t have reliable support when it matters"
+      "Your systems break when you need them most",
+      "Your brand looks 'razz' instead of premium",
+      "You're doing manually what should be automated",
+      "You don't have a reliable technical plug"
     ],
-    closingLine: "Everything slows down."
+    closingLine: "You're leaving money on the table."
   },
   solution: {
-    heading: "This removes that bottleneck.",
-    body: "A controlled support system where you can request what you need and get it delivered in a structured way.",
+    heading: "We fix the leak.",
+    body: "Plus-Up Tech provides the structured technical layer your brand needs to actually scale. We handle the complex stuff so you can focus on the bag.",
     capabilities: [
-      "Request custom-built web systems",
-      "Process digital media and documents",
-      "Get structured outputs for your work",
-      "Solve technical bottlenecks faster"
+      "Custom-built automation systems",
+      "High-end brand identity design",
+      "Advanced media & data processing",
+      "24/7 technical execution support"
     ]
   },
   difference: {
-    heading: "This is not a marketplace.",
+    heading: "No be today we start.",
     bodyLines: [
-      "Not a freelance listing.",
-      "Not a random service page.",
-      "This is a focused support layer built for real workflows."
+      "Not your regular 'tech bro' agency.",
+      "Not a random freelance gig.",
+      "We are a focused technical support layer built for real execution."
     ],
     points: [
-      "Built for precision",
+      "Built for scale",
       "Structured delivery",
       "Fast execution",
-      "Controlled access"
+      "Exclusive access"
     ]
   },
   audience: {
-    heading: "Designed for serious technical use.",
+    heading: "Designed for those who mean business.",
     isFor: [
-      "cybersecurity professionals",
+      "serious entrepreneurs",
       "technical operators",
-      "digital analysts"
+      "high-ticket brands"
     ],
     isNotFor: [
       "casual browsing",
-      "general-purpose requests",
-      "non-technical use"
+      "time-wasters",
+      "non-serious requests"
     ]
   },
   services: {
-    heading: "Our Services",
+    heading: "The Plug List",
     items: [
       {
-        title: "Custom Web Systems",
-        description: "Bespoke internal tools and secure data collection interfaces built for your specific workflow requirements."
+        title: "Web & Automation",
+        description: "We build the internal systems and secure tools that work while you sleep. No stories, just systems.",
+        tagline: "No stories, just systems."
       },
       {
-        title: "Digital Media Processing",
-        description: "Advanced enhancement, clarity processing, and structured metadata extraction for complex media assets."
+        title: "Brand Identity",
+        description: "Your brand should look like money. We create high-end visual identities that command respect.",
+        tagline: "Premium or nothing."
       },
       {
-        title: "Technical Workflow Support",
-        description: "Direct assistance in solving technical bottlenecks and automating repetitive manual data tasks."
+        title: "Digital Media",
+        description: "High-end visuals and data processing that stop the scroll and deliver pure clarity.",
+        tagline: "Sharp like razor."
       },
       {
-        title: "Structured Data Outputs",
-        description: "Conversion of raw technical data into precise, actionable reports and structured documentation."
+        title: "Technical Support",
+        description: "The technical plug you've been looking for. We solve bottlenecks and automate the boring stuff.",
+        tagline: "We get the keys."
       }
     ],
-    closingLine: "Engineered for technical precision."
+    closingLine: "Engineered for pure results."
   },
   urgency: {
-    heading: "Access is limited.",
+    heading: "Access is strictly limited.",
     body: [
-      "We are onboarding a controlled number of users.",
-      "Once capacity is reached, access will pause."
+      "We only onboard a controlled number of clients to maintain quality.",
+      "Once the slots are full, we close the doors. No stories."
     ]
   },
   form: {
-    heading: "Request Access",
+    heading: "Join the Waiting Room",
     fields: {
       name: "Name",
       email: "Email",
-      telegram: "Telegram username (optional)"
+      telegram: "Telegram username"
     },
     dropdown: {
-      label: "What do you need support with?",
+      label: "What's your biggest bottleneck?",
       options: [
-        "Web systems",
-        "Media / documents",
-        "Custom solution",
-        "General support"
+        "Automation / Systems",
+        "Brand Identity",
+        "Digital Media",
+        "Custom Solution"
       ]
     },
-    submitButton: "Submit Request",
-    microText: "Requests are reviewed before approval.",
-    successMessage: "Request received. Access updates will be shared after review.",
-    telegramGroupText: "Join our private telegram channel!!",
-    telegramGroupLink: "https://t.me/your_private_group_placeholder"
+    submitButton: "Join the Telegram Channel",
+    microText: "Join the private channel for onboarding and updates.",
+    successMessage: "Welcome to the inner circle. Check your Telegram.",
+    telegramGroupText: "Join our private Telegram channel for the real updates.",
+    telegramGroupLink: "https://t.me/plusuptech_waitingroom"
   },
   finalCta: {
-    line: "If your work requires speed, structure, and precision — you don’t have to handle everything alone anymore.",
-    button: "Request Access"
+    line: "If you're ready to stop playing and start scaling, we're ready to plug you in.",
+    button: "Join the Waiting Room"
   },
   footer: {
-    text: "Controlled access. Structured execution."
+    text: "Plus-Up Tech. No stories. Pure results."
   }
 };

@@ -41,9 +41,12 @@ export const Services = () => {
                   <div className="mb-6 p-3 w-fit rounded bg-accent/10 text-accent group-hover:bg-accent group-hover:text-background transition-all">
                     <Icon size={24} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-white/90 mb-4">
+                  <h3 className="text-2xl font-display font-bold text-white/90 mb-2">
                     {service.title}
                   </h3>
+                  <p className="text-accent/80 font-mono text-xs uppercase tracking-wider mb-4">
+                    {service.tagline}
+                  </p>
                   <p className="text-white/60 leading-relaxed mb-6 max-w-md">
                     {service.description}
                   </p>

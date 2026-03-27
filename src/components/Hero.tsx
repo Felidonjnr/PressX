@@ -98,7 +98,7 @@ export const Hero = () => {
               >
                 <div className="relative rounded-2xl border border-white/10 overflow-hidden bg-[#050505] shadow-2xl shadow-accent/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
                     alt="High-end Technical Interface"
                     referrerPolicy="no-referrer"
                     className="w-full h-auto grayscale-[0.4] group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
