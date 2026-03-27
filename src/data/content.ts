@@ -6,7 +6,7 @@ export const siteContent = {
     microText: "Limited access. We only onboard serious working boys."
   },
   problem: {
-    heading: "Most sources out there are quak",
+    heading: "Most connects out there are "Quak"",
     points: [
       "Disappoint you when you need them the most",
       "Collect money without delivering your job",
@@ -17,7 +17,7 @@ export const siteContent = {
   },
   solution: {
     heading: "We fix the leak.",
-    body: "Plus-Up Tech provides the structured technical layer your brand needs to actually scale. We handle the complex stuff so you can focus on the bag.",
+    body: "Plus-Up Tech provides everything tech you need for deliver your work",
     capabilities: [
       "Custom-built automation systems",
       "High-end brand identity design",
