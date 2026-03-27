@@ -6,7 +6,7 @@ export const siteContent = {
     microText: "Limited access. We only onboard serious working boys."
   },
   problem: {
-    heading: "Most connects out there are \"Quak"\",
+    heading: "Most connects out there are \"Quak\"",
     points: [
       "Disappoint you when you need them the most",
       "Collect money without delivering your job",
