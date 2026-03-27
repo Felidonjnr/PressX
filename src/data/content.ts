@@ -33,7 +33,6 @@ export const siteContent = {
       "We are a focused technical support layer built for real execution."
     ],
     points: [
-      "Built for scale",
       "Structured delivery",
       "Fast execution",
       "Exclusive access"
