@@ -27,7 +27,6 @@ export default function App() {
         <Difference />
         <AudienceFilter />
         <Services />
-        <SystemPreview />
         <Urgency />
         <AccessForm />
         <FinalCta />
