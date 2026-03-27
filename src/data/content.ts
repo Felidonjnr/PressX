@@ -1,16 +1,16 @@
 export const siteContent = {
   hero: {
-    headline: "Plus-Up Your Digital Game with Precision Tech.",
-    subheadline: "We are the trusted dark-tech plug helping you build, scale, and automate your brand without the usual stories. Pure results, no stress.",
+    headline: "Plus-Up the right way",
+    subheadline: "We are the trusted dark-tech plug helping you deliver results without much hassle. Pure results, no stress.",
     primaryCta: "Join the Waiting Room",
-    microText: "Limited access. We only onboard serious players."
+    microText: "Limited access. We only onboard serious working boys."
   },
   problem: {
-    heading: "Most digital setups are just 'vibes and insha Allah'.",
+    heading: "Most sources out there are quak",
     points: [
-      "Your systems break when you need them most",
-      "Your brand looks 'razz' instead of premium",
-      "You're doing manually what should be automated",
+      "Disappoint you when you need them the most",
+      "Collect money without delivering your job",
+      "Lose clients because you didn't have the right resource",
       "You don't have a reliable technical plug"
     ],
     closingLine: "You're leaving money on the table."
