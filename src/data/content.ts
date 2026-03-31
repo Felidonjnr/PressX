@@ -41,14 +41,14 @@ export const siteContent = {
   audience: {
     heading: "Designed for those who mean business.",
     isFor: [
-      "serious entrepreneurs",
-      "technical operators",
-      "high-ticket brands"
+      "serious working boys",
+      "boys the want to learn and get started too",
+  
     ],
     isNotFor: [
-      "casual browsing",
+
       "time-wasters",
-      "non-serious requests"
+      "unserious requests"
     ]
   },
   services: {
