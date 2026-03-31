@@ -104,7 +104,7 @@ export const siteContent = {
     microText: "Join the private channel for onboarding and updates.",
     successMessage: "Welcome to the inner circle. Check your Telegram.",
     telegramGroupText: "Join our private Telegram channel for the real updates.",
-    telegramGroupLink: "https://t.me/plusuptech_waitingroom"
+    telegramGroupLink: "https://t.me/plusuptech"
   },
   finalCta: {
     line: "If you're ready to stop playing and start scaling, we're ready to plug you in.",
