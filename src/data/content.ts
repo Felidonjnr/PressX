@@ -52,30 +52,30 @@ export const siteContent = {
     ]
   },
   services: {
-    heading: "The Plug List",
+    heading: "Our Services",
     items: [
       {
         title: "Web & Automation",
-        description: "We build the internal systems and secure tools that work while you sleep. No stories, just systems.",
+        description: "We build any website to bill your clients and secure tools that work while you sleep. No stories, just systems.",
         tagline: "No stories, just systems."
       },
       {
         title: "Brand Identity",
-        description: "Your brand should look like money. We create high-end visual identities that command respect.",
+        description: "Your brand should look like money. We create professional company profiles for any business you want.",
         tagline: "Premium or nothing."
       },
       {
         title: "Digital Media",
-        description: "High-end visuals and data processing that stop the scroll and deliver pure clarity.",
-        tagline: "Sharp like razor."
+        description: "High-end editing of any kind picture editing, document editing, cards and passport editing,face swap, voice editin, lip sync vide, professional deep fake",
+        tagline: "Very sharp and professional"
       },
       {
         title: "Technical Support",
-        description: "The technical plug you've been looking for. We solve bottlenecks and automate the boring stuff.",
-        tagline: "We get the keys."
+        description: "The technical plug you've been looking for. We solve bottlenecks and automate the boring stuff like auto reply bots, follow up bots, and any custom bots you want",
+        tagline: "Just tell us want you want, we build it"
       }
     ],
-    closingLine: "Engineered for pure results."
+    closingLine: "Quality Results only"
   },
   urgency: {
     heading: "Access is strictly limited.",
